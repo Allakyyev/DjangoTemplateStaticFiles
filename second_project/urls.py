@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path
 
 from second_app import views
+from django.conf.urls import  include
 
 urlpatterns = [
-    path('second/', views.index, name="Index" ),
+    path('second/', include('second_app.urls')),
     path('admin/', admin.site.urls),
 ]
